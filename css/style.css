@@ -2,4 +2,140 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: linear-gradient(45deg, orange, #c23f55 70%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+:root {
+  --ru-gray: rgb(43, 43, 43);
+}
+
+#user_card {
+  background: white;
+  height: 230px;
+  width: 500px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+
+  img {
+    margin-top: -100px;
+    border-radius: inherit;
+    transition: 0.2s;
+  }
+
+  h2 {
+    font-weight: 500;
+    margin-top: 1rem;
+    color: var(--ru-gray);
+  }
+
+  p {
+    color: gray;
+  }
+
+  .user_social_info {
+    opacity: 0;
+    display: none;
+    justify-content: space-between;
+    width: 70%;
+    margin-top: 1.5rem;
+    transition: 0.2s;
+    animation: show 0.2s ease-in-out forwards;
+
+    div {
+      text-align: center;
+
+      h3 {
+        color: var(--ru-gray);
+        font-weight: 600;
+      }
+
+      p {
+        color: gray;
+      }
+    }
+  }
+
+  .actions {
+    opacity: 0;
+    display: none;
+    margin-top: 2rem;
+    justify-content: center;
+    gap: 2rem;
+    transition: 0.2s ease-in-out;
+    animation: show 0.2s ease-in-out forwards;
+
+    button {
+      font-size: 1.3rem;
+      color: gray;
+      padding: 1rem 2rem;
+      border: 1px solid gray;
+      border-radius: 10px;
+      transition: 0.2s ease-in-out;
+
+      &:hover {
+        background: gray;
+        color: white;
+      }
+
+      &:active {
+        transform: scale(0.95);
+      }
+
+      &:first-child {
+        background: #e7536c;
+        color: white;
+        border: 1px solid #e7536c;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+
+  &.opened {
+    height: 550px;
+
+    img {
+      height: 350px;
+      margin-top: -150px;
+    }
+
+    h2 {
+      margin-top: 2.5rem;
+    }
+
+    .user_social_info {
+      display: flex;
+    }
+
+    .actions {
+      display: flex;
+    }
+  }
+}
+
+@keyframes show {
+  to {
+    opacity: 1;
+  }
 }
