@@ -8,6 +8,6 @@ export function formatNumber(num) {
 export const fetchData = async (api) => {
   const req = await fetch(api);
   const res = await req.json();
-
+  document.querySelector(".loader_wrapper").style.display = "none";
   return res;
 };

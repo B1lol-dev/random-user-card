@@ -1,4 +1,4 @@
-import { fetchData } from "./utils.js";
+import { formatNumber, fetchData } from "./utils.js";
 
 fetchData("https://randomuser.me/api/").then((data) => {
   user_card.children[0].src = data.results[0].picture.large;
