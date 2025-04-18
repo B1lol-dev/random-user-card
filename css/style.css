@@ -21,6 +21,7 @@ button {
 
 :root {
   --ru-gray: rgb(43, 43, 43);
+  --ru-pink: #e7536c;
 }
 
 #user_card {
@@ -33,12 +34,12 @@ button {
   align-items: center;
   padding: 30px;
   cursor: pointer;
-  transition: 0.2s ease-in-out;
+  transition: 0.4s ease-in-out;
 
   img {
     margin-top: -100px;
     border-radius: inherit;
-    transition: 0.2s;
+    transition: 0.4s;
   }
 
   h2 {
@@ -57,8 +58,8 @@ button {
     justify-content: space-between;
     width: 70%;
     margin-top: 1.5rem;
-    transition: 0.2s;
-    animation: show 0.2s ease-in-out forwards;
+    animation: showElement 0.2s ease-in-out forwards;
+    animation-delay: 0.3s;
 
     div {
       text-align: center;
@@ -80,8 +81,8 @@ button {
     margin-top: 2rem;
     justify-content: center;
     gap: 2rem;
-    transition: 0.2s ease-in-out;
-    animation: show 0.2s ease-in-out forwards;
+    animation: showElement 0.2s ease-in-out forwards;
+    animation-delay: 0.4s;
 
     button {
       font-size: 1.3rem;
@@ -101,9 +102,9 @@ button {
       }
 
       &:first-child {
-        background: #e7536c;
+        background: var(--ru-pink);
         color: white;
-        border: 1px solid #e7536c;
+        border: 1px solid var(--ru-pink);
 
         &:hover {
           opacity: 0.8;
@@ -134,7 +135,7 @@ button {
   }
 }
 
-@keyframes show {
+@keyframes showElement {
   to {
     opacity: 1;
   }
