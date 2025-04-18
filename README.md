@@ -37,4 +37,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 - [Random User API](https://randomuser.me/) for providing user data.
 - Najot Talim for support.
-- Open-source contributors for inspiration.
